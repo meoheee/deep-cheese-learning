@@ -1,7 +1,7 @@
 import cv2
 import sys
 
-videoPath = 'C:/Users/meoheee/Documents/devlab/aicosshackathon/test.mp4'
+videoPath = 'C:/Users/meoheee/Documents/Github/deep-cheese-learning/videotoimage/test.mp4'
 count = 0
 framecount = 0
 
@@ -18,7 +18,7 @@ while (cap.isOpened()):
         # 이때 단위는 밀리초, 즉 천분의 1초
         if cv2.waitKey(1) & 0xFF == ord('q'):  # q를 누르면 영상이 종료됨
             break
-        if framecount%10==0:
+        if framecount%50==0:
             cv2.imwrite("frame%d.jpg" % count, image)  # cv2.imwrite - 이미지저장
             imgName.append("frame%d.jpg" % count)
             print("frame%d.jpg" % count)

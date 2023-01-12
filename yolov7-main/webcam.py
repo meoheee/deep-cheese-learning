@@ -16,8 +16,8 @@ try:
         ret, frame = webcam.read()
         if ret == True:
             detections = yolov7.detect(frame)
+            print(detections)
             detected_frame = draw(frame, detections)
-            print(json.dumps(detections, indent=4))
             cv2.imshow('webcam', detected_frame)
             cv2.waitKey(1)
         else:
