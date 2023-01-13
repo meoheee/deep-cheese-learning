@@ -12,10 +12,10 @@
 	<!--script type="text/javascript"
 		src="JS/JS.js">
 	</!--script-->
-	{{a,b}}
+	<!-- {{a,b}} -->
 	<script>
-		var a;
-		var b;
+		var a = {{a}};
+		var b = {{b}};
 
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		    mapOption = {
@@ -32,11 +32,11 @@
             map: map
         });
 
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(a, b), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(a, b), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
 
 		var map = new kakao.maps.Map(mapContainer, mapOption);
 

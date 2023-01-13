@@ -15,19 +15,19 @@ print(errorCnt)
 def hello_world():  # put application's code here
     try:
         testlist = [i for i in range(errorCnt)]
-        a = render_template('mainpage_2.html', myList=testlist)
+        c = render_template('mainpage_2.html', myList=testlist)
     except:
-        a = "NONO"
-    return a
+        c = "NONO"
+    return c
 
 
 @app.route('/mapView')
 def mapView():
     try:
-        a = render_template('index.html', a=35.441524, b=126.469718)
+        c = render_template('index.html', a=35.441524, b=126.469718)
     except:
-        a = "NONO"
-    return a
+        c = "NONO"
+    return c
 
 
 
